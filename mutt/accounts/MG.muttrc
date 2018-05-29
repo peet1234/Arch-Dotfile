@@ -1,0 +1,22 @@
+# vim: filetype=neomuttrc
+# muttrc file for account MG
+set realname = "Pisit"
+set from = "mingqingcom@gmail.com"
+set smtp_url = "smtp://mingqingcom@gmail.com@smtp.gmail.com:587/"
+set sendmail = "/usr/bin/msmtp -a MG"
+set folder = "~/.mail/MG"
+set header_cache = ~/.config/mutt/accounts/MG/cache/headers
+set message_cachedir = ~/.config/mutt/accounts/MG/cache/bodies
+set certificate_file = ~/.config/mutt/accounts/MG/certificates
+source "~/.config/mutt/credentials/getmuttpass MG |"
+
+set mbox_type = Maildir
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+bind index,pager g noop
+#bind index gg first-entry
+mailboxes =MG =---------- =Sent =Trash =sent-mail =INBOX
+set spoolfile = "+INBOX"
+set record = "+Sent"
+set postponed = "+[Gmail]/Drafts"

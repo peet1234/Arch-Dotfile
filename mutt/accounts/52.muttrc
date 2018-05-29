@@ -1,0 +1,22 @@
+# vim: filetype=neomuttrc
+# muttrc file for account 52
+set realname = "52Travel"
+set from = "52travel.pty@gmail.com"
+set smtp_url = "smtp://52travel.pty@gmail.com@smtp.gmail.com:587/"
+set sendmail = "/usr/bin/msmtp -a 52"
+set folder = "~/.mail/52"
+set header_cache = ~/.config/mutt/accounts/52/cache/headers
+set message_cachedir = ~/.config/mutt/accounts/52/cache/bodies
+set certificate_file = ~/.config/mutt/accounts/52/certificates
+source "~/.config/mutt/credentials/getmuttpass 52 |"
+
+set mbox_type = Maildir
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+bind index,pager g noop
+#bind index gg first-entry
+mailboxes =52PTY =---------- =Sent =Trash =sent-mail =INBOX
+set spoolfile = "+INBOX"
+set record = "+Sent"
+set postponed = "+[Gmail]/Drafts"

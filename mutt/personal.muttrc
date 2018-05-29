@@ -1,0 +1,12 @@
+# vim: filetype=muttrc
+
+# This file is where the wizard will output
+# information on which file to treat as default
+# and shortcut bindings for jumping from account to account.
+
+# You can edit this manually if you know what you're doing.
+
+macro index,pager <F5> '<sync-mailbox><enter-command>source /home/peet/.config/mutt/accounts/PG.muttrc<enter><change-folder>!<enter>'
+source /home/peet/.config/mutt/accounts/PG.muttrc
+macro index,pager <F6> '<sync-mailbox><enter-command>source /home/peet/.config/mutt/accounts/MG.muttrc<enter><change-folder>!<enter>'
+macro index,pager <F7> '<sync-mailbox><enter-command>source /home/peet/.config/mutt/accounts/52.muttrc<enter><change-folder>!<enter>'

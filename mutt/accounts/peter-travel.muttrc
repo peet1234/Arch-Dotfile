@@ -1,0 +1,11 @@
+set mbox_type=maildir
+set mbox="~/.mail/peter-travel/inbox/"
+set spoolfile="~/.mail/peter-travel/inbox/"
+set folder="~/.mail/peter-travel/"
+set record="~/.mail/peter-travel/"
+
+mailboxes =peter-travel =---------- =inbox = Sent ~/.mail/peter-travel/inbox 
+set sort=threads
+set include=yes
+set indent_str="> "
+

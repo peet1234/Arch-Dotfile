@@ -1,0 +1,11 @@
+set mbox_type=maildir
+set mbox="~/.mail/52tr/inbox/"
+set spoolfile="~/.mail/52tr/inbox/"
+set folder="~/.mail/52tr/"
+set record="~/.mail/sent/"
+
+mailboxes =52pattay =---------- =inbox = Sent ~/.mail/52tr/inbox 
+set sort=threads
+set include=yes
+set indent_str="> "
+
