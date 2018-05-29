@@ -14,9 +14,9 @@ quick = 10
 
 [Repository PG-remote]
 type = Gmail
-remoteuser = pisit.jee@gmail.com
+remoteuser = username@gmail.com
 sslcacerfile = /etc/ssl/cets/ca-certificates.crt
-remotepasseval = mailpasswd("PG")
+remotepasseval = 
 port = 993
 folderfilter = lambda foldername: foldername not in ['[Gmail]/All Mail']
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
@@ -37,7 +37,7 @@ quick = 10
 
 [Repository MG-remote]
 type = Gmail
-remoteuser = mingqingcom@gmail.com
+remoteuser = username@gmail.com
 sslcacerfile = /etc/ssl/cets/ca-certificates.crt
 remotepasseval = mailpasswd("MG")
 port = 993
@@ -59,7 +59,7 @@ quick = 10
 
 [Repository 52-remote]
 type = Gmail
-remoteuser = 52travel.pty@gmail.com
+remoteuser = username@gmail.com
 sslcacerfile = /etc/ssl/cets/ca-certificates.crt
 remotepasseval = mailpasswd("52")
 port = 993
