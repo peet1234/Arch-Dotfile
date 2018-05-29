@@ -1,0 +1,50 @@
+search lemony
+rename 1.mp4
+open_with unzip
+rename weechat.conf.bak
+rename weechat.conf
+c
+rename urls
+wq
+open_with 0
+search .epub
+search *.epub
+delete\
+deletey
+open_with kodi
+open_with qutebrowser
+rename 1.容易受伤的女人.wav
+rename 2.万水千山总是情.wav
+rename 3.似是故人来.wav
+cd 
+rename 
+rename 4.千千阙歌.wav
+rename 5.秋来秋去.wav
+rename 6.顺流逆流.wav
+rename 7.梨涡淺笑.wav
+rename 8.晚秋.wav
+rename 9.飘雪.wav
+rename 10.一生何求.wav
+rename 11.好歌献给你.wav
+rename 12.偏偏喜欢你.wav
+open_with vlc
+open_with 3
+open_with 5
+open_with 6
+open_with smplayer
+open_with
+open_with mpv
+rename 费玉清
+rename 蔡琴.ape
+rename 蔡琴.cue
+rename 1.ape
+rename 蔡琴
+rename 1.cue
+open_with 1
+delete
+mkdir 
+open_with gthumb
+open_with xnviewmp
+rename 1.torrent
+open_with 
+rename elm3.mobi
