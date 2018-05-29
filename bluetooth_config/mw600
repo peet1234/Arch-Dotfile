@@ -1,0 +1,8 @@
+#!/bin/bash
+bluetoothctl << EOF
+power on
+EOF
+sleep 10s
+bluetoothctl << EOF
+connect 58:17:0c:ED:BC:19
+EOF
