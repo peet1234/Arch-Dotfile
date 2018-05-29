@@ -1,0 +1,13 @@
+[retriever]
+type = SimplePOP3Retriever
+server = pop3.xxxxx.com
+username = fullemail
+port = 110
+password = 
+
+[destination]
+type =Maildir
+path = ~/.mail/
+
+[options]
+read_all = False
