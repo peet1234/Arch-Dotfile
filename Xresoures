@@ -1,0 +1,6 @@
+URxvt.depth: 32
+URxvt.background: rgba:1111/1111/1111/dddd
+URxvt.font: 9x15
+Xcursor.theme: Adwaita
+Xcursor.size: 20
+URxvt.perl-ext-common:  ...,resize-font,...
