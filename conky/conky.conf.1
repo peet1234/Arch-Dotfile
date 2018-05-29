@@ -1,0 +1,84 @@
+conky.config = {
+-- -- Conky settings -- #
+	background = true,
+	update_interval = 1,
+
+	cpu_avg_samples = 2,
+	net_avg_samples = 2,
+
+	override_utf8_locale = true,
+
+	double_buffer = true,
+	no_buffers = true,
+
+	text_buffer_size = 32768,
+	imlib_cache_size = 0,
+
+-- -- Window specifications -- #
+	own_window = yes,
+	own_window_type = override,
+	own_window_transparent = yes,
+	own_window_class = override,
+	own_window_argb_visual = yes,
+--	own_window_argb_value = 120,
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+
+	border_inner_margin = 0,
+	border_outer_margin = 0,
+
+	-- Conky on second monitor
+	-- xinerama_head = 2,
+
+
+-- --minimum_size 1100 700
+--	maximum_width = 1100,
+--	minimum_width = 1366,
+--	minimum_height = 1366,
+	alignment = 'middle_middle',
+	gap_x = 0,
+	gap_y = 50,
+
+-- -- Graphics settings -- #
+	draw_shades = true,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+
+-- -- Text settings -- #
+	use_xft = true,
+	font = 'Ubuntu Mono:size=8',
+	font1 = 'Kinnari:size=35',
+	xftalpha = 0.8,
+--Ícones: ${font Conky Icons by Carelli:size=14}
+
+	uppercase = false,
+
+	color2 = '#FFFFFF',
+	color1 = '#a5aebd',
+
+----own_window_transparent yes
+	own_window_colour = '#000000',
+	minimum_width = 1360, minimum_height = 600,
+};
+conky.text = [[
+#${goto 10}${color #33B2FF}${font Kinnari:size=35}สมุทรปราการ${goto 290}|${goto 320}${color #33B2FF}${font Kinnari:size=35}พัทยา
+#${goto 60}${voffset -40}${color #1E4F6D}${font URW Bookman:pixelsize=20}${execi 300 /home/peet/.config/conky/weather.sh "samut-prakan"}${goto 289}|${goto 320}${color #1E4F6D}${font URW Bookman:pixelsize=20}${execi 300 /home/peet/.config/conky/weather.sh "pattaya"} 
+${goto 750}${offset 10}${color1}${font Conky Icons by Carelli:size=40}ƃ${font}${alignr}${color eaeaea}${font GE Inspira:pixelsize=80}${voffset -60}${time %H:%M:%S}${font}${voffset -50}${color ffa300}${font GE Inspira:pixelsize=32}${time %d} ${color EAEAEA}${font GE Inspira:pixelsize=18}${time %B} ${time %Y}${font}${font GE Inspira:pixelsize=50}${voffset 7}${offset -150}${time %A}${font}
+${goto 1}${hr 2}
+${offset 75}Sup+F1 to get help${color #1793d0}${font size=14}${alignr}${offset -40}${distribution} ${kernel}
+#${goto 15}${color #f8df58}${font Conky Icons by Carelli:size=14}E${goto 40}${font Radio Space:size=9}WLAN${goto 640}${color1}M+S+f=Ranger${font}${goto 1050}${color #f8df58}${voffset -7}${font Conky Icons by Carelli:size=14}E${font Radio Space:size=9}ETH
+#${goto 15}${font Conky Icons by Carelli:size=14}${color}Ƃ${goto 40}${font}Up Speed: ${upspeed wlp3s0}${goto 180}${upspeedgraph  wlp3s0 20,80 DD3A21 DD3A21}${goto 640}${color1}M+o=Chromium${goto 1050}${color2}${voffset -7}${font Conky Icons by Carelli:size=14}Ƃ${font}Up Speed: ${upspeed enp4s0f1}${goto 1260}${upspeedgraph  enp4s0f1 20,80 DD3A21 DD3A21}
+#${goto 15}${font Conky Icons by Carelli:size=14}Ɓ${font}${goto 40}Down Speed: ${downspeed wlp3s0}${goto 180}${downspeedgraph wlp3s0 20,80 2216e1 2216e1}${goto 640}${color1}M+t=Email${goto 1050}${color2}${voffset -7}${font Conky Icons by Carelli:size=14}Ɓ${font}Down Speed: ${downspeed enp4s0f1}${goto 1260}${downspeedgraph  enp4s0f1 20,80 2216e1 2216e1}
+#${goto 15}${font Conky Icons by Carelli:size=14}h${font}${goto 40}IP: ${addrs wlp3s0}${goto 640}${color1}M+S+l=libreoffice${goto 1050}${color2}${voffset -7}${font Conky Icons by Carelli:size=14}h${font}IP: ${addrs enp4s0f1}
+#${voffset 13}${goto 15}${font Conky Icons by Carelli:size=14}Ǘ${font} SSID: ${wireless_essid wlp3s0} : ${wireless_link_bar 7,80 wlp3s0}  %${goto 640}${color1}S+e=eDP-1 only${color2}${goto 1050}${font Conky Icons by Carelli:size=14}h${font}Public IP: ${exec curl ipinfo.io/ip}
+#${voffset 10}${goto 15}${color #F8DF58}${font Conky Icons by Carelli:size=14}Ŷ${goto 40}${font Radio Space:size=9}PROCESSOS${voffset -7}${goto 640}${color1}S+h=HDMI only${color2}${goto 1050}${font Conky Icons by Carelli:size=14}ň${font Radio Space:size=9}DISCOS${color}${font} 
+#${voffset 5}${font Ubuntu:Bold:size=9}${goto 40}Name ${goto 170}PID${goto 225}CPU%${goto 280}MEM%${voffset -7}${goto 1050}${font Conky Icons by Carelli:size=14}ǘ${font}${acpitemp} ºC ${goto 640}${color1}S+d=HDMI & eDP-1 ${color2}${goto 1210}CPU Temp:${exec sensors | grep -n 'Core' | sed -n 2p | awk -F'+' '{print $2}' | awk -F' ' '{print $1}'}  
+#${voffset 7}${goto 40}${top name 1} ${goto 170}${top pid 1}${goto 225}${top cpu 1}${goto 280}${top mem 1}${goto 1050}${voffset -7}${font Conky Icons by Carelli:size=12}Ǒ${font}Root:  ${fs_bar 7,80 /}${goto 640}${color1}S+b=Brightness -${color2}${goto 1210}${fs_free /} / ${fs_size /}
+#${voffset 5}${goto 40}${top name 2} ${goto 170}${top pid 2}${goto 225}${top cpu 2}${goto 280}${top mem 2}${voffset -7}${goto 1050}${font Conky Icons by Carelli:size=12}M${font}home:${fs_bar 7,80 /home}${goto 640}${color1}S+Shift+b=Brightness +${color2}${goto 1210}${fs_free /home} / ${fs_size /home}
+#${goto 40}${top name 3} ${goto 170}${top pid 3}${goto 225}${goto 280}${top mem 3}${goto 640}${color1}S+= Volume Up${color2}${goto 1050}${font Conky Icons by Carelli:size=13}Ǒ${font}EXT: ${fs_bar 7,80 /media/EXT}${goto 1210}${fs_free /media/EXT} / ${fs_size /media/EXT}
+#${goto 40}${top name 4} ${goto 170}${top pid 4}${goto 225}${goto 280}${top mem 4}${goto 640}${color1}S+- Volume Down${color2}${goto 1050}Disk Read: ${diskiograph_read 20,80 2216e1 2216e1}Disk Write: ${diskiograph_write 20,80 DD3A21 DD3A21}
+#${voffset -18}${goto 40}${top name 5} ${goto 170}${top pid 5}${goto 225}${goto 280}${top mem 5}${goto 640}${color1}S+m Mute${color2}
+#${goto 40}${top name 6} ${goto 170}${top pid 6}${goto 225}${goto 280}${top mem 6}${voffset -7}${goto 1050}${color #F8DF58}${font Conky Icons by Carelli:size=14}Ŵ${font Radio Space:size=9}CPU${voffset -7}${goto 1210}${font Conky Icons by Carelli:size=14}B${font Radio Space:size=9}MEM${color}${font}
+#${goto 40}${top name 7} ${goto 170}${top pid 7}${goto 225}${goto 280}${top mem 7}${goto 1050}CPU0: ${cpu cpu0}%${cpubar 7,80 cpu0}${goto 1210}RAM: $memperc% ${membar 7,80}
+#${goto 40}${top name 8} ${goto 170}${top pid 8}${goto 225}${goto 280}${top mem 8}${goto 1050}CPU1: ${cpu cpu1}%${cpubar 7,80 cpu1}${goto 1210}SWAP: $swapperc% ${swapbar 7,80}
+]];
